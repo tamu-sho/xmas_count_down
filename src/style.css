@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(197, 37, 5);
+  transition: all 0.65s ease-in-out;
+}
+.loader.load_end {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  /* background-color: rgb(7, 30, 42); */
+  /* background: radial-gradient(circle, rgb(38, 38, 38) 25%, rgb(11, 11, 11) 100%); */
+  background: url(./assets/bg2.jpg) no-repeat center center/cover;
+  filter: blur(12px);
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 2.5% 2.5%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container_inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.center_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center_content-head {
+  margin: 0 0 0.2em 0;
+  font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  font-size: min(3em, 10vw);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: min(1em, 2.8vw);
+}
+.countdown > div {
+  padding: 0 0.2em 0.1em;
+  font-size: 6em;
+  font-weight: 300;
+  width: 1em;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  font-family: "Squada One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.countdown > div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 0.16em;
+  opacity: 0.7;
+}
+.countdown > .date::before, .countdown > .hours::before, .countdown > .minutes::before {
+  content: ":";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  padding: 0 0 0.24em 0;
+  font-size: 0.8em;
+}
+.countdown > .date::after {
+  content: "DAYS";
+}
+.countdown > .hours::after {
+  content: "HOURS";
+}
+.countdown > .minutes::after {
+  content: "MINUTES";
+}
+.countdown > .seconds::after {
+  content: "SECONDS";
+}
+
+.under_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  color: #dfdfdf;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.under_content-left > p {
+  margin: 0;
+}
+
+.under_content-right > p {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */
