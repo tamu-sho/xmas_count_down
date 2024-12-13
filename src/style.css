@@ -26,6 +26,18 @@ main {
   height: 100%;
   background-color: rgb(197, 37, 5);
   transition: all 0.65s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader::before {
+  font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: normal;
+  content: "Loading...";
+  display: block;
+  font-size: 1.5em;
+  color: #fff;
 }
 .loader.load_end {
   opacity: 0;
@@ -98,7 +110,7 @@ main {
   padding: 0 0.2em 0.1em;
   font-size: 6em;
   font-weight: 300;
-  width: 1em;
+  min-width: 1em;
   text-align: center;
   position: relative;
   color: #fff;

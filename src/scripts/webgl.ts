@@ -121,9 +121,9 @@ export default class Webgl {
 
     // model loader
     const gltfModelsPath: string[] = [
-      "./models/gltf/ornament_gold.gltf",
-      "./models/gltf/ornament_red.gltf",
-      "./models/gltf/ornament_green.gltf",
+      "./models/gltf/02/ornament_gold.gltf",
+      "./models/gltf/02/ornament_red.gltf",
+      "./models/gltf/02/ornament_green.gltf",
     ];
     let models: GLTF[] = [];
     for (const element of gltfModelsPath) {
